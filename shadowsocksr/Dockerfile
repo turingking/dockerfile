@@ -14,7 +14,7 @@ ENV PROTOCOL origin
 ENV TIMEOUT 300
 ENV OBFS plain
 
-ENTRYPOINT ["/usr/bin/ssserver"]
+#ENTRYPOINT ["/usr/bin/ssserver"]
 CMD ssserver -s "$SERVER_ADDR" \
              -p "$SERVER_PORT" \
              -m "$METHOD"      \
