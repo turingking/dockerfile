@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+  android-studio:
+      image: turingking/android-studio:3.1.2
+      environment:
+          DISPLAY: $DISPLAY
+      volumes:
+          - /home/turingking/AndroidStudioProjects:/root/AndroidStudioProjects
+          - android-sdk:/opt/android-sdk 
+          - /tmp/.X11-unix:/tmp/.X11-unix
+          - $XAUTHORITY:/home/ubuntu/.Xauthority
+          - /dev/kvm:/dev/kvm
+          - /dev/bus/usb:/dev/bus/usb
+      privileged: true
+
+volumes:
+  android-sdk:
+
