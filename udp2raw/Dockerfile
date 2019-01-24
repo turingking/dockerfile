@@ -7,6 +7,6 @@ RUN set -ex \
 COPY udp2raw /udp2raw/
 WORKDIR /udp2raw
 RUN chmod +x udp2raw
-CMD ./udp2raw  -s -l0.0.0.0:4096  -r127.0.0.1:7777   -k "passwd" --raw-mode faketcp   --cipher-mode xor  -a
+ENTRYPOINT [ "./udp2raw" ]
 
 
